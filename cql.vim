@@ -26,7 +26,7 @@ syn keyword cqlKeyword         where with update use using values
 
 
 " Column family options
-syn keyword cqlKeyword          comparator comment key_cache_size row_cache_size read_repair_chance
+syn keyword cqlKeyword          comparator key_cache_size row_cache_size read_repair_chance
 syn keyword cqlKeyword          gc_grace_seconds default_validation min_compaction_threshold
 syn keyword cqlKeyword          max_compaction_threshold row_cache_save_period_in_seconds
 syn keyword cqlKeyword          key_cache_save_period_in_seconds memtable_flush_after_mins
@@ -54,9 +54,11 @@ syn region cqlColumnType        start="column_type\W" end="\"'" contains=cqlColT
 syn keyword cqlPStrategy        simplestrategy localstrategy
 syn region cqlPlacementStrategy start="placement_strategy\W" end="\"'" contains=cqlPlaceStrategy
 
-" TODO Make comment use regions properly
-" comment\s*=\s*['"](.*)['"]
-
+" Comments highlight the word as a keyword and comment as blue
+syn region cqlKeyword start=/comment\s*=\s*'/ end=/'/ contains=cqlComment
+syn region cqlKeyword start=/comment\s*=\s*"/ end=/"/ contains=cqlComment
+syn match cqlComment /'\zs\%(\\.\|[^\\']\)*\ze'/ contained
+syn match cqlComment /"\zs\%(\\.\|[^\\"]\)*\ze"/ contained
 
 " Special values
 syn keyword cqlSpecial         false null true
