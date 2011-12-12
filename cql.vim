@@ -51,7 +51,7 @@ syn keyword cqlColType          standard super
 syn region cqlColumnType        start="column_type\W" end="\"'" contains=cqlColType
 
 " TODO Fix to use regions properly
-syn keyword cqlPStrategy        simplestrategy localstrategy
+syn keyword cqlPStrategy        simplestrategy localstrategy networktopologystrategy
 syn region cqlPlacementStrategy start="placement_strategy\W" end="\"'" contains=cqlPlaceStrategy
 
 " Comments highlight the word as a keyword and comment as blue
