@@ -68,6 +68,7 @@ syn keyword cqlType             org.apache.cassandra.db.compaction.SizeTieredCom
 " Variable Types
 syn keyword cqlType     bytea ascii text varchar uuid varint int bigint
 syn keyword cqlType     bytestype utf8type timeuuidtype
+syn keyword cqlType     blob boolean counter decimal double float
 syn keyword cqlType     serializingcacheprovider
 
 " Consistency Levels
