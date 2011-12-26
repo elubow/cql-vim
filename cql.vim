@@ -59,11 +59,13 @@ syn region cqlKeyword start=/comment\s*=\s*'/ end=/'/ contains=cqlComment
 syn region cqlKeyword start=/comment\s*=\s*"/ end=/"/ contains=cqlComment
 syn match cqlComment /'\zs\%(\\.\|[^\\']\)*\ze'/ contained
 syn match cqlComment /"\zs\%(\\.\|[^\\"]\)*\ze"/ contained
+syn match cqlComment "--.*$" contains=cqlComment
 
 " Special values
 syn keyword cqlSpecial         false null true
 
-syn keyword cqlType             org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy
+" TODO Add ability to include entire Java class name for compaction strategies
+syn keyword cqlType            SizeTieredCompactionStrategy LeveledCompactionStrategy
 
 " Variable Types
 syn keyword cqlType     bytea ascii text varchar uuid varint int bigint
