@@ -24,8 +24,11 @@ syn keyword cqlKeyword         on or primary reversed
 syn keyword cqlKeyword         select set truncate
 syn keyword cqlKeyword         where with update use using values
 
+" CQL 3 additions
+syn keyword cqlKeyword         table order by
 
-" Column family options
+
+" Column family/table options
 syn keyword cqlKeyword          comparator key_cache_size row_cache_size read_repair_chance
 syn keyword cqlKeyword          gc_grace_seconds default_validation min_compaction_threshold
 syn keyword cqlKeyword          max_compaction_threshold row_cache_save_period_in_seconds
@@ -37,6 +40,9 @@ syn keyword cqlKeyword          column_type key_cache_save_period gc_grace repli
 syn keyword cqlKeyword          row_cache_provider compaction_strategy column_metadata
 syn keyword cqlKeyword          column_name validation_class subcomparator
 syn keyword cqlKeyword          index_name index_type
+
+" CQL 3 additions
+syn keyword cqlKeyword          clustering
 
 " Keyspace options
 syn keyword cqlKeyword          placement_strategy strategy_options durable_writes replication_factor
