@@ -38,8 +38,10 @@ syn keyword cqlKeyword          replication_on_write default_validation_class ke
 syn keyword cqlKeyword          rows_cached row_cache_save_period row_cache_keys_to_save keys_cached
 syn keyword cqlKeyword          column_type key_cache_save_period gc_grace replicate_on_write
 syn keyword cqlKeyword          row_cache_provider compaction_strategy column_metadata
-syn keyword cqlKeyword          column_name validation_class subcomparator
-syn keyword cqlKeyword          index_name index_type
+syn keyword cqlKeyword          column_name validation_class subcomparator replication
+syn keyword cqlKeyword          index_name index_type caching dclocal_read_repair_chance
+syn keyword cqlKeyword          bloom_filter_fp_chance populate_io_cache_on_flush compaction
+syn keyword cqlKeyword          compression class sstable_compression
 
 " CQL 3 additions
 syn keyword cqlKeyword          clustering
