@@ -25,7 +25,7 @@ syn keyword cqlKeyword         select set truncate
 syn keyword cqlKeyword         where with update use using values
 
 " CQL 3 additions
-syn keyword cqlKeyword         table order by
+syn keyword cqlKeyword         table order by type if exists not frozen
 
 
 " Column family/table options
@@ -65,9 +65,11 @@ syn region cqlPlacementStrategy start="placement_strategy\W" end="\"'" contains=
 " Comments highlight the word as a keyword and comment as blue
 syn region cqlKeyword start=/comment\s*=\s*'/ end=/'/ contains=cqlComment
 syn region cqlKeyword start=/comment\s*=\s*"/ end=/"/ contains=cqlComment
+syn region cqlComment start="/\*" end="\*/" contains=cqlComment
 syn match cqlComment /'\zs\%(\\.\|[^\\']\)*\ze'/ contained
 syn match cqlComment /"\zs\%(\\.\|[^\\"]\)*\ze"/ contained
 syn match cqlComment "--.*$" contains=cqlComment
+syn match sqlComment "/\*\*/" 
 
 " Special values
 syn keyword cqlSpecial         false null true
@@ -80,6 +82,7 @@ syn keyword cqlType     bytea ascii text varchar uuid varint int bigint
 syn keyword cqlType     bytestype utf8type timeuuidtype timeuuid timestamp
 syn keyword cqlType     blob boolean counter decimal double float
 syn keyword cqlType     serializingcacheprovider
+syn keyword cqlType     set list map
 
 " Consistency Levels
 syn region cqlType      start="consistency" end="zero"
