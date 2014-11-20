@@ -82,7 +82,7 @@ syn keyword cqlType     bytea ascii text varchar uuid varint int bigint
 syn keyword cqlType     bytestype utf8type timeuuidtype timeuuid timestamp
 syn keyword cqlType     blob boolean counter decimal double float
 syn keyword cqlType     serializingcacheprovider
-syn keyword cqlType     set list map
+syn keyword cqlType     set list map tuple
 
 " Consistency Levels
 syn region cqlType      start="consistency" end="zero"
