@@ -68,6 +68,7 @@ syn region cqlKeyword start=/comment\s*=\s*"/ end=/"/ contains=cqlComment
 syn match cqlComment /'\zs\%(\\.\|[^\\']\)*\ze'/ contained
 syn match cqlComment /"\zs\%(\\.\|[^\\"]\)*\ze"/ contained
 syn match cqlComment "--.*$" contains=cqlComment
+syn match cqlComment "//.*$" contains=cqlComment
 
 " Special values
 syn keyword cqlSpecial         false null true
