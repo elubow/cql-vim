@@ -1,13 +1,15 @@
 # Cassandra CQL Syntax Highlighter for Vim
 Highlight CQL syntaxes inside the vim editor.
 
-## Installation
-Copy the _cql.vim_ file into your ~/.vim/syntax directory.
+## Install with pathogen
 
-## Vim Usage
-Inside vim:
-    :set syn=cql
+    cd ~/.vim/
+    git submodule add git@github.com/elubow/cql-vim.git bundle/cql-vim
+    vim bundle/
+    
+## Manual install 
 
-# Automatic loading
-In your _~/.vimrc_ file, add the following line:
-    autocmd BufRead *.cql set syntax=cql
+    cd ~/.local/src
+    git clone git@github.com/elubow/cql-vim.git 
+    cp -R cql-vim/syntax/* ~/.vim/syntax/
+    cp -R cql-vim/ftdetect/* ~/.vim/ftdetect/
