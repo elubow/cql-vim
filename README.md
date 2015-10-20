@@ -4,9 +4,8 @@ Highlight CQL syntaxes inside the vim editor.
 ## Install with pathogen
 
     cd ~/.vim/
-    git submodule add git@github.com/elubow/cql-vim.git bundle/cql-vim
-    vim bundle/
-    
+    git clone git@github.com/elubow/cql-vim.git bundle/cql-vim
+
 ## Manual install 
 
     cd ~/.local/src
