@@ -101,6 +101,10 @@ syn match cqlNumber            "-\=\<[0-9][0-9]*e[+-]\=[0-9]*\>"
 syn match cqlNumber            "-\=\<[0-9]*\.[0-9]*e[+-]\=[0-9]*\>"
 syn match cqlNumber            "\<0x[abcdefABCDEF0-9]*\>"
 
+" String values
+syn region cqlString    start="'" end="'"
+syn region cqlString    start="\$\$" end="\$\$"
+
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
